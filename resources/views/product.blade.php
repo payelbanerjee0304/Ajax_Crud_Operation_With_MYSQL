@@ -20,6 +20,12 @@
             background-image:url('img/1.jpg');
             background-size:100%;
         }
+        #n1{
+            text-align: center;
+            color: yellow;
+            text-decoration: underline;
+            text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+        }
         #t1{
             background-color: #02E3CB;
         
@@ -31,8 +37,8 @@
         <div class="row">
             <div class="col-md-2"></div>
                 <div class="col-md-8">
-                    <h2 class="my-3">
-                        <font color="green">Laravel AjaxCrud</font>
+                    <h2 id="n1" class="my-3">
+                        Laravel AjaxCrud
                     </h2>
                     <div id="showmessage1" class="alert alert-success alert-dismissible" style="display:none">Product Added Successfully</div>
                     
