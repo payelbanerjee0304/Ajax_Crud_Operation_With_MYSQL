@@ -80,4 +80,17 @@ class MainController extends Controller
             ]);
         }
     }
+
+    public function generateCsv(){
+        $data = DB::table('pracproducts')->get();
+        $filename = "application.csv";
+        $fp=fopen($filename, "w+");
+        fputcsv($fp, array('Id', 'Product Name', 'Product Price'));
+        foreach($data as $row) {
+        fputcsv($fp, array($row->id, $row->name, $row->price));
+        }
+        fclose($fp);
+        $headers = array('Content-Type' => 'text/csv');
+        return response()->download($filename, 'application.csv', $headers);
+    }
 }

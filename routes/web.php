@@ -24,3 +24,4 @@ Route::post('/update-product',[MainController::class,'updateproduct'])->name('up
 Route::post('/delete-product',[MainController::class,'deleteproduct'])->name('delete.product');
 Route::get('/pagination/paginate-data',[MainController::class,'pagination']);
 Route::get('/search-product',[MainController::class,'searchproduct'])->name('search.product');
+Route::get('/generateCSV',[MainController::class,'generateCSV'])->name('download.csv');

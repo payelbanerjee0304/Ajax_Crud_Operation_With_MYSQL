@@ -30,6 +30,10 @@
             background-color: #02E3CB;
         
         }
+        .csvbtn
+        {
+            float: right;
+        }
     </style>
   </head>
   <body>
@@ -43,6 +47,11 @@
                     <div id="showmessage1" class="alert alert-success alert-dismissible" style="display:none">Product Added Successfully</div>
                     
                     <a href="" class="btn btn-info my-3"  data-toggle="modal" data-target="#addModal">Add Product</a>
+
+                    <div class="csvbtn">
+                    <a href="{{ route('download.csv') }}" class="btn btn-primary">Download
+                    CSV</a>
+                    </div>
                     <input type="text" name="search" id="search" class=" mb-3 form-control" placeholder="Search Here...">
                     <div class="table-data">
                     <table class="table table-bordered" id="t1">
